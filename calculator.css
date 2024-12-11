@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calculator-container {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.top-buttons {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+}
+
+.top-buttons button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#redBTN {
+    background-color: red;
+}
+
+#yellowBTN {
+    background-color: rgba(255, 225, 0, 0.878);
+}
+
+#greenBTN {
+    background-color: green;
+}
+
+.display-area {
+    width: 100;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#display {
+    text-align: right;
+    font-size: 2em;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+/*버튼 4*4 배치*/
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+}
+  
+  /* 공통 버튼 스타일 */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+  
+  /* Function 버튼 (C, ±, %, /) */
+.function {
+    background-color: #898988;
+    color: white;
+}
+  
+.function:hover {
+    background-color: #434242;
+}
+  
+  /* 연산자 버튼 (+, -, x, /) */
+.operator {
+    background-color: #30302e;
+    color: white;
+}
+  
+.operator:hover {
+    background-color: #0f0f0f;
+}
+  
+  /* 숫자 버튼 */
+.number {
+    background-color: #f0f0f0;
+    color: #333;
+}
+  
+.number:hover {
+    background-color: #ddd;
+}
+  
+  /* '0' 버튼 (두 칸 차지) */
+.zero {
+    grid-column: span 2;
+    background-color: #f0f0f0;
+    color: #333;
+}
+  
+.zero:hover {
+    background-color: #ddd;
+}
+
+ /* 버튼 클릭하면 배경색 변경 */
+ .button:active {
+    background-color: #f2a310;
+    color: white;
+    transition: background-color 0.3s;
+  }
